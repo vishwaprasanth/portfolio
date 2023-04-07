@@ -7,10 +7,10 @@ function navbar(){
         <div class="logo">Vishwa <span>Prasanth</span></div>
 
         <div class="navbar">
-                <a href="home.html" class="active">home</a>
-                <a href="about.html">About</a>
-                <a href="project.html">Project</a>
-                <a href="contact.html">contact</a>
+                <a href="./Components/home.js" class="active">home</a>
+                <a href="./Components/about.js">About</a>
+                <a href="./Components/project.js">Project</a>
+                <a href="./Components/contact">contact</a>
         </div>
             </div>
     )

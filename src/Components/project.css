@@ -20,41 +20,43 @@
     color: var(--text-color);
     background-color: #1f242d;
 }
-.container h1{
+h1{
     display: flex;
-    align-items: center;
+    text-align: center;
+    color: var(--main-color);
+}
+.projects{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
 }
 .project {
+    width: 100vw;
+    height: 75vh;
     display: flex;
-    width: 66%;
-    gap: 5%;
-}
-.project-1{
-    border-radius: 3px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 1rem;
-    width: 30%;
+    width: 300px;
+    border: 1px solid black;
 }
-
-.project-2{
-    border-radius: 3px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    position: relative;
-    margin: 1rem;
-    width: 30%;
+.project-img{
+    width: 100%;
 }
-
-.project-3{
-    border-radius: 3px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    position: relative;
-    margin: 1rem;
-    width: 30%;
+p{
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
 }
-.project-3 img{
-    width: 25%;
+.links{
+    display: flex;
+    width: 10%;
+}
+.links img{
+    width: 3rem;
 }

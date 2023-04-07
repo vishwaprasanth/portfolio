@@ -1,6 +1,32 @@
-import React from 'react';
+import React,{Component} from 'react';
+// import Typical from 'react-typical';
 import Navbar from './navbar';
-import './home.css'
+import './home.css';
+import { useState, useEffect } from 'react';
+
+const Typewriter = ({ text }) => {
+  const [displayedText, setDisplayedText] = useState('');
+  
+  useEffect(() => {
+    let currentIndex = 0;
+    const intervalId = setInterval(() => {
+      if (currentIndex >= text.length) {
+        currentIndex = 0;
+        setDisplayedText('');
+      } else {
+        setDisplayedText(prevText => prevText + text[currentIndex]);
+        currentIndex++;
+      }
+    }, 100);
+    
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [text]);
+
+  return <span>{displayedText}</span>;
+};
+
 function home(){
     return (
         <div>
@@ -11,12 +37,12 @@ function home(){
         <div class="home-content">
             <div class="first-line">hello, I am</div>
             <div class="second-line">Vishwa Prasanth</div>
-            <div class="third-line">And I'm a <span class="span">Frontend Developer</span></div>
+            <div class="third-line">And I'm a <Typewriter class="Typewriter" text=" Frontend Developer" /></div>
             {/* <div class="social-media">
                 <a href=""><img src="https://icons8.com/icon/16318/github" alt="#"></a>
                 <a href="#"><img src="https://icons8.com/icon/108786/linkedin-2" alt="#"></a>
             </div>  */}
-            <button class="project-btn" ><a href="project.html">Project</a></button>
+            {/* <button class="project-btn" ><a href="./Component/project.js">Project</a></button> */}
         </div>
         <div class="home-left">
             <div class="home-img">

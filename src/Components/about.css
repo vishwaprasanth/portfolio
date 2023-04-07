@@ -8,7 +8,7 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'poppins', sans-serif; 
-    color: #fff;
+    color: #000000;
   }
 :root{
     --bg-color: #1f242d;
@@ -18,7 +18,31 @@
 }
 .about{
     background-color: #1f242d;
+    margin: 10%;
+
 }
 .about h1{
-    color: var(--text-color);
+    color: var(--main-color);
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+p{
+    margin: 0 10%;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+li{
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+}
+@media only screen and (max-width: 768px){
+    
 }
